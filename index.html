@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dig-Arts Portal</title>
+    
+    <!-- Google Fonts: Cormorant Garamond (English Serif), Noto Serif JP (Japanese Serif), Noto Sans JP (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', '"Noto Serif JP"', 'serif'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#1a1a1a',
+                            light: '#fafafa',
+                            border: '#eaeaeb',
+                            textMuted: '#666666'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-black min-h-screen font-sans antialiased selection:bg-brand-black selection:text-white">
+
+    <!-- Minimalist Header -->
+    <header class="bg-white border-b border-brand-border py-8 px-4">
+        <div class="max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
+            <h1 class="text-2xl md:text-3xl font-serif tracking-[0.2em] text-brand-black uppercase">Dig-Arts Portal</h1>
+            <div class="w-8 h-[1px] bg-brand-black my-4"></div>
+            <p class="text-xs text-brand-textMuted tracking-[0.15em] uppercase">Internal Tools & Services</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        
+        <!-- Intro Section -->
+        <div class="text-center mb-20">
+            <h2 class="text-xl md:text-2xl font-serif tracking-widest mb-6">業務支援システム</h2>
+            <p class="text-sm md:text-base text-brand-textMuted font-light leading-loose max-w-2xl mx-auto">
+                Dig-Artsの各システム・ドキュメントへのアクセスリンク集です。<br>
+                ブランドの世界観を保ちながら、必要なツールへスムーズにアクセスできます。
+            </p>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+            <!-- Card 01: EC Site -->
+            <div class="bg-white border border-brand-border p-10 group hover:border-brand-black transition-colors duration-500 flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="flex items-center justify-between mb-8 border-b border-brand-border pb-4">
+                    <h3 class="text-lg font-serif tracking-widest uppercase text-brand-black">01 / Official Store</h3>
+                    <i data-lucide="shopping-bag" class="w-5 h-5 text-gray-300 group-hover:text-brand-black transition-colors duration-500"></i>
+                </div>
+                <p class="text-sm text-brand-textMuted mb-10 font-light leading-relaxed flex-grow">
+                    公式ECサイトへのアクセス。商品ラインナップやデザインの確認、UIのプレビューにご利用ください。
+                </p>
+                <div class="mt-auto">
+                    <a href="https://dig-arts.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.15em] font-medium text-brand-black hover:text-gray-500 transition-colors group/btn">
+                        <span>Visit Store</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 02: Prompt Maker -->
+            <div class="bg-white border border-brand-border p-10 group hover:border-brand-black transition-colors duration-500 flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="flex items-center justify-between mb-8 border-b border-brand-border pb-4">
+                    <h3 class="text-lg font-serif tracking-widest uppercase text-brand-black">02 / Prompt Maker</h3>
+                    <i data-lucide="wand-2" class="w-5 h-5 text-gray-300 group-hover:text-brand-black transition-colors duration-500"></i>
+                </div>
+                <ul class="space-y-2 flex-grow">
+                    <li>
+                        <a href="https://mearin0424-tech.github.io/digarts-prompt-maker/apparel_01.html" target="_blank" rel="noopener noreferrer" class="group/link flex items-center justify-between text-sm text-brand-textMuted hover:text-brand-black transition-colors py-3">
+                            <span class="font-light tracking-wide">着用画像生成</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-hover/link:translate-y-0 transition-all duration-300"></i>
+                        </a>
+                    </li>
+                    <li class="border-t border-dashed border-gray-200"></li>
+                    <li>
+                        <a href="https://mearin0424-tech.github.io/digarts-prompt-maker/picture_01.html" target="_blank" rel="noopener noreferrer" class="group/link flex items-center justify-between text-sm text-brand-textMuted hover:text-brand-black transition-colors py-3">
+                            <span class="font-light tracking-wide">絵画商品画像生成</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-hover/link:translate-y-0 transition-all duration-300"></i>
+                        </a>
+                    </li>
+                    <li class="border-t border-dashed border-gray-200"></li>
+                    <li>
+                        <a href="https://mearin0424-tech.github.io/digarts-prompt-maker/review_apparel_01.html" target="_blank" rel="noopener noreferrer" class="group/link flex items-center justify-between text-sm text-brand-textMuted hover:text-brand-black transition-colors py-3">
+                            <span class="font-light tracking-wide">デザインレビュー</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-hover/link:translate-y-0 transition-all duration-300"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 03: Design Maker -->
+            <div class="bg-white border border-brand-border p-10 group hover:border-brand-black transition-colors duration-500 flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="flex items-center justify-between mb-8 border-b border-brand-border pb-4">
+                    <h3 class="text-lg font-serif tracking-widest uppercase text-brand-black">03 / Design Maker</h3>
+                    <i data-lucide="palette" class="w-5 h-5 text-gray-300 group-hover:text-brand-black transition-colors duration-500"></i>
+                </div>
+                <ul class="space-y-2 flex-grow">
+                    <li>
+                        <a href="https://mearin0424-tech.github.io/digarts-design-simulator/index.html" target="_blank" rel="noopener noreferrer" class="group/link flex items-center justify-between text-sm text-brand-textMuted hover:text-brand-black transition-colors py-3">
+                            <span class="font-light tracking-wide">アパレルデザインシミュレーター</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-hover/link:translate-y-0 transition-all duration-300"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 04: Data Management -->
+            <div class="bg-white border border-brand-border p-10 group hover:border-brand-black transition-colors duration-500 flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="flex items-center justify-between mb-8 border-b border-brand-border pb-4">
+                    <h3 class="text-lg font-serif tracking-widest uppercase text-brand-black">04 / Data Management</h3>
+                    <i data-lucide="database" class="w-5 h-5 text-gray-300 group-hover:text-brand-black transition-colors duration-500"></i>
+                </div>
+                <ul class="space-y-2 flex-grow">
+                    <li>
+                        <a href="https://drive.google.com/drive/folders/0AE1CK-dKdUy5Uk9PVA" target="_blank" rel="noopener noreferrer" class="group/link flex items-center justify-between text-sm text-brand-textMuted hover:text-brand-black transition-colors py-3">
+                            <span class="font-light tracking-wide">GoogleDrive ホーム</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-hover/link:translate-y-0 transition-all duration-300"></i>
+                        </a>
+                    </li>
+                    <li class="border-t border-dashed border-gray-200"></li>
+                    <li>
+                        <a href="https://docs.google.com/spreadsheets/d/1TtYKLo1DBrJWWYiiHjhbOHZlIf_V3cRey6rzG9RC-0E/edit?gid=322761860#gid=322761860" target="_blank" rel="noopener noreferrer" class="group/link flex items-center justify-between text-sm text-brand-textMuted hover:text-brand-black transition-colors py-3">
+                            <span class="font-light tracking-wide">メタデータ連携 (スプレッドシート)</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-hover/link:translate-y-0 transition-all duration-300"></i>
+                        </a>
+                    </li>
+                    <li class="border-t border-dashed border-gray-200"></li>
+                    <li>
+                        <a href="https://docs.google.com/spreadsheets/d/1aySaZlLGIfxPe_kE28vcQ7WNAT5nvdBdnxYFL3vgD7E/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer" class="group/link flex items-center justify-between text-sm text-brand-textMuted hover:text-brand-black transition-colors py-3">
+                            <span class="font-light tracking-wide">Shopify在庫連動ツール</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 group-hover/link:translate-y-0 transition-all duration-300"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-brand-border bg-white py-12 mt-12">
+        <div class="max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
+            <div class="w-4 h-4 border border-brand-black rotate-45 mb-6"></div>
+            <p class="font-serif tracking-widest text-xs text-brand-textMuted uppercase">&copy; Dig-Arts All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
